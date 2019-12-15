@@ -1,0 +1,141 @@
+[{
+    "section": "Memory",
+    "categories": [{
+        "name": "RAM",
+        "detail": [{
+            "title": "Corsair Vengeance LPX DDR4 16GB",
+            "price": "$39.99",
+            "image": "ram",
+            "description": "VENGEANCE LPX memory is designed for high-performance overclocking. The heatspreader is made of pure aluminum for faster heat dissipation, and the eight-layer PCB helps manage heat and provides superior overclocking headroom.",
+            "link": "https://www.corsair.com/us/en/Categories/Products/Memory/VENGEANCE-LPX/p/CMK8GX4M1A2400C14"
+        }
+        ]
+    }]
+    
+},
+{
+    "section": "Storage",
+    "categories": [{
+        "name": "Hard Drive",
+        "detail": [{
+            "title": "WD - Blue 1TB Internal SATA Hard Drive",
+            "price": "$39.99",
+            "image": "hard drive",
+            "description": "Give your desktop a performance and storage boost when you combine your hard drive with an SSD to maximize speed of data access and a WD Blue drive for up to 6TB of additional capacity.",
+            "link": "https://shop.westerndigital.com/products/internal-drives/wd-blue-desktop-sata-hdd#WD10EZEX"
+        }]
+    },
+    {
+        "name": "SSD",
+        "detail": [{
+            "title": "Samsung 860 EVO 500GB SSD",
+            "price": "$59.99",
+            "image": "ssd",
+            "description": "The Samsung 860 EVO is specially designed to enhance performance of mainstream PCs and laptops. With the latest V-NAND technology, this fast and reliable SSD comes in a wide range of compatible form factors and capacities.",
+            "link": "https://www.samsung.com/us/computing/memory-storage/solid-state-drives/ssd-860-evo-2-5--sata-iii-2tb-mz-76e2t0b-am/"
+        }]
+    }
+    ]
+}, {
+    "section": "CPU",
+    "categories": [{
+        "name": "Processors",
+        "detail": [{
+            "title": "AMD Ryzen 5 2600x",
+            "price": "$119.99",
+            "image": "cpu",
+            "description": "Designed for high multiprocessing performance for games and creators, the Ryzen 5 2600X 3.6 GHz Six-Core AM4 Processor from AMD has a base clock speed of 3.6 GHz and a maximum turbo frequency of 4.2 GHz. A member of AMD's 2nd generation of Ryzen processors, this processor features six cores with twelve threads in an AM4 socket with 3MB of L2 cache memory and 16MB of L3 cache memory. Having six cores allows the processor to run multiple programs simultaneously without slowing down the system, while the twelve threads allow a basic ordered sequence of instructions to be passed through or processed by a single CPU core. This processor also has a TDP of 95W.",
+            "link": "https://www.amd.com/en/products/cpu/amd-ryzen-5-2600x"
+        },
+        {
+            "title": "Intel Core i9-9900KF Desktop Processor",
+            "price": "$469.99",
+            "image": "cpu2",
+            "description": "8 Cores/ 16 Threads, 3.60 GHz up to 5.00 GHz Max Turbo Frequency/ 16 MB Cache, Compatible only with Motherboards based on Intel 300 Series Chipsets, Discrete GPU – No Processor Graphics, Intel Optane Memory Supported; Maximum temperature allowed at the processor: 100°C",
+            "link": "https://ark.intel.com/content/www/us/en/ark/products/190887/intel-core-i9-9900kf-processor-16m-cache-up-to-5-00-ghz.html"
+        }
+        ]
+    }]
+    
+}, {
+    "section": "Motherboard",
+    "categories": [{
+        "name": "Motherboard",
+        "detail": [{
+            "title": "MSI B450 Gaming Plus",
+            "price": "$79.99",
+            "image": "motherboard",
+            "description": "This MSI GAMING motherboard supports all the latest storage standards. This allows you to connect any ultra-fast storage device, giving you in-game benefits. Start games faster, load levels faster and have a real advantage over your enemies. Outsmart and outperform your opponents in-game using an array of unique MSI GAMING tools. Clever hardware & software tools, created to keep you one step ahead of the competition and boost your skills. Cooling your PC is essential for reliable performance. We've made sure to include enough fan headers with full control to allow you to cool your system any way you want.",
+            "link": "https://www.msi.com/Motherboard/B450-GAMING-PLUS"
+        }]
+    }]
+    
+}, {
+    "section": "Case",
+    "categories": [{
+        "name": "Case",
+        "detail": [{
+            "title": "NZXT H510 Mid-Tower",
+            "price": "$69.99",
+            "image": "case",
+            "description": "We’ve made our iconic H Series PC cases even better. Our new lineup still features the elements builders loved in the original H Series, including our patented cable management system, removable fan/radiator mounting brackets, and easy-to-use drive trays, alongside new updates like a front-panel USB-C connector supporting high-speed USB 3. 1 Gen 2 devices, a tempered glass side panel that installs with a single thumbscrew, and an upgraded Smart Device V2 on the H510i.",
+            "link": "https://www.nzxt.com/products/h510-matte-black-red"
+        }]
+    }]
+    
+}, {
+    "section": "GPU",
+    "categories": [{
+        "name": "Graphics Cards",
+        "detail": [{
+            "title": "GeForce RTX 2060",
+            "price": "$349.00",
+            "image": "gpu",
+            "description": "GeForce RTX™ graphics cards are powered by the Turing GPU architecture and the all-new RTX platform. This gives you up to 6X the performance of previous-generation graphics cards and brings the power of real-time ray tracing and AI to your favorite games.",
+            "link": "https://www.nvidia.com/en-us/geforce/graphics-cards/rtx-2060/"
+        }, {
+            "title": "AMD Radeon RX 580",
+            "price": "$284.99",
+            "image": "gpu2",
+            "description": "Based on AMD Polaris architecture and manufactured with 14nm process, the AMD Radeon RX 580 graphics card is specced with 2304 Stream processors, 4GB/8GB GDDR5 memory and 256-bit memory bus. A performance-class graphics card, the Radeon RX 580 empowers gamers who play anything from the latest MOBAs to the most popular AAA titles in Full HD and beyond, and also delivers the power to drive you into the next level of immersion of the world of VR gaming and entertainment.",
+            "link": "https://www.amd.com/en/products/graphics/radeon-rx-580"
+        }]
+    }]
+    
+}, {
+    "section": "PSU",
+    "categories": [{
+        "name": "Power Supply",
+        "detail": [{
+            "title": "EVGA 850W BQ",
+            "price": "$284.99",
+            "image": "psu",
+            "description": "ULTRA QUIET: Teflon Nano-Steel Bearing fan allows for near silent operation, even under the toughest loads.\nEXCELLENT PERFORMANCE: 85% efficiency or higher under typical loads and high quality Japanese brand capacitors ensure long-term reliability.\nMODULAR DESIGN: Semi-modular design allows you to only use the cables you need, helping to improve case airflow, eliminate unnecessary wires, and best of all, reduce cable clutter.",
+            "link": "https://www.evga.com/products/product.aspx?pn=110-BQ-0850-V1"
+        }]
+    }]
+    
+}, {
+    "section": "Cooling",
+    "categories": [{
+        "name": "CPU Cooling Fan",
+        "detail": [{
+            "title": "Cooler Master HYPER 212 RGB BLACK EDITION",
+            "price": "$41.99",
+            "image": "fan",
+            "description": "The legendary Hyper air cooler is back and better than before. The Hyper 212 RGB Black Edition offers better installation and great performance, easily one of the best air cooling solutions. The aluminum top cover and nickel plated jet black fins, give the Hyper 212 RGB Black Edition a premium aesthetic appeal. The sleek jet black not only makes it look great, but also increase cooling performance.",
+            "link": "https://www.coolermaster.com/catalog/coolers/cpu-air-coolers/hyper-212-rgb-black-edition/"
+        }]
+    }, {
+        "name": "Case Fan",
+        "detail": [{
+            "title": "Cosair Air Series™ AF120 LED 120mm Fan",
+            "price": "$15.99",
+            "image": "case fan",
+            "description": "Corsair Air Series LED high airflow PC case fans combine efficient, low-noise airflow with striking LED lighting. The custom-molded blades are designed for high-volume air delivery with less noise and turbulence than typical case fans. They’re translucent, with a frosted texture, so the light from the four LEDs adds a dramatic effect.",
+            "link": "https://www.corsair.com/us/en/Categories/Products/Fans/AIR-SERIES-LED-CONFIG/p/CO-9050015-BLED"
+        }]
+    }]
+    
+}
+]

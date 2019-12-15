@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HGs-iU-Gmw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PC Parts-->
+        <scene sceneID="Lxx-QF-aA2">
+            <objects>
+                <tableViewController id="ZR0-P8-gKN" customClass="PCTableViewController" customModule="PcParts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3JC-TM-gUw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pcPartsCell" id="iUw-23-J9A">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iUw-23-J9A" id="hc2-uy-Chv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZR0-P8-gKN" id="o1g-Pe-vIm"/>
+                            <outlet property="delegate" destination="ZR0-P8-gKN" id="gCP-Ww-cEb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PC Parts" id="tzq-IG-j0U"/>
+                    <connections>
+                        <segue destination="ZTa-ES-dUa" kind="show" identifier="productSegue" id="ywB-gF-xFn"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84J-lP-tQ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="687.20000000000005" y="106.59670164917542"/>
+        </scene>
+        <!--Product Table View Controller-->
+        <scene sceneID="aWx-Ig-sUx">
+            <objects>
+                <tableViewController id="ZTa-ES-dUa" customClass="ProductTableViewController" customModule="PcParts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SV2-at-MfS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productCell" rowHeight="377" id="kDI-dx-sBF" customClass="PCTableViewCell" customModule="PcParts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="377"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kDI-dx-sBF" id="eiY-Lk-LLy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="376.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpy-Xi-Yvu">
+                                            <rect key="frame" x="30" y="31" width="69" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dX-LN-PdO">
+                                            <rect key="frame" x="30" y="255" width="86.5" height="22.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gpu" translatesAutoresizingMaskIntoConstraints="NO" id="aAG-Ve-xKJ">
+                                            <rect key="frame" x="67" y="102" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="oZF-Wg-6HK"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn More Here:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmy-FG-q4p">
+                                            <rect key="frame" x="30" y="290.5" width="161.5" height="23"/>
+                                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quD-FY-my7">
+                                            <rect key="frame" x="30" y="62" width="38" height="22.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Link" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zD9-2M-pQN">
+                                            <rect key="frame" x="29" y="321.5" width="334" height="40"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="VEx-yy-c4x"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="url"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mmy-FG-q4p" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="30" id="0Om-Zl-Mq0"/>
+                                        <constraint firstItem="mmy-FG-q4p" firstAttribute="top" secondItem="3dX-LN-PdO" secondAttribute="bottom" constant="13" id="1R0-bM-Aqm"/>
+                                        <constraint firstAttribute="trailing" secondItem="zD9-2M-pQN" secondAttribute="trailing" constant="12" id="1Xp-JY-fZo"/>
+                                        <constraint firstAttribute="bottom" secondItem="zD9-2M-pQN" secondAttribute="bottom" constant="15" id="1k4-zW-G86"/>
+                                        <constraint firstItem="3dX-LN-PdO" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="30" id="AF8-ug-dt8"/>
+                                        <constraint firstItem="zD9-2M-pQN" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="29" id="CpJ-BQ-R3P"/>
+                                        <constraint firstItem="quD-FY-my7" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="30" id="DYr-Ax-qXL"/>
+                                        <constraint firstItem="aAG-Ve-xKJ" firstAttribute="top" secondItem="quD-FY-my7" secondAttribute="bottom" constant="17.5" id="Dr5-N5-SFV"/>
+                                        <constraint firstItem="3dX-LN-PdO" firstAttribute="top" secondItem="aAG-Ve-xKJ" secondAttribute="bottom" constant="25" id="Gzx-7C-vLY"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hpy-Xi-Yvu" secondAttribute="trailing" constant="20" symbolic="YES" id="LYZ-C0-DlL"/>
+                                        <constraint firstItem="zD9-2M-pQN" firstAttribute="top" secondItem="mmy-FG-q4p" secondAttribute="bottom" constant="8" id="Xqf-F4-uwv"/>
+                                        <constraint firstItem="quD-FY-my7" firstAttribute="top" secondItem="Hpy-Xi-Yvu" secondAttribute="bottom" constant="3.5" id="geN-SA-HNh"/>
+                                        <constraint firstAttribute="trailing" secondItem="aAG-Ve-xKJ" secondAttribute="trailing" constant="68" id="ixg-py-rF2"/>
+                                        <constraint firstItem="aAG-Ve-xKJ" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="67" id="jNv-qt-Q38"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3dX-LN-PdO" secondAttribute="trailing" id="pg5-Md-FjN"/>
+                                        <constraint firstItem="Hpy-Xi-Yvu" firstAttribute="top" secondItem="eiY-Lk-LLy" secondAttribute="top" constant="31" id="sb3-Xj-QK1"/>
+                                        <constraint firstItem="Hpy-Xi-Yvu" firstAttribute="leading" secondItem="eiY-Lk-LLy" secondAttribute="leading" constant="30" id="sus-6L-1Ox"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productDescription" destination="3dX-LN-PdO" id="b8w-k5-MQz"/>
+                                    <outlet property="productImage" destination="aAG-Ve-xKJ" id="pVj-qg-JsZ"/>
+                                    <outlet property="productLink" destination="zD9-2M-pQN" id="D4r-cU-eEE"/>
+                                    <outlet property="productName" destination="Hpy-Xi-Yvu" id="sFN-ll-vba"/>
+                                    <outlet property="productPrice" destination="quD-FY-my7" id="rVe-Xu-5xo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZTa-ES-dUa" id="fle-MG-k8H"/>
+                            <outlet property="delegate" destination="ZTa-ES-dUa" id="7SH-nn-pfd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sO4-Mc-bAv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485.5999999999999" y="106.59670164917542"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2ql-yR-GdN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HGs-iU-Gmw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fnK-rl-MUI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZR0-P8-gKN" kind="relationship" relationship="rootViewController" id="Ec5-YP-vSy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hqz-LO-uLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="106.59670164917542"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gpu" width="1282" height="754"/>
+    </resources>
+</document>
