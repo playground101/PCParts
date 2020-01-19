@@ -16,6 +16,7 @@ struct PCModel: Decodable {
 struct Category: Decodable {
     var name: String
     var detail: [ProductDetail]
+    
 }
 struct ProductDetail: Decodable {
     var title: String
@@ -23,4 +24,5 @@ struct ProductDetail: Decodable {
     var image: String
     var description: String
     var link: String
+    var selected: Bool? = false
 }

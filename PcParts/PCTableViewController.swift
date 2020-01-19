@@ -12,6 +12,14 @@ class PCTableViewController: UITableViewController {
     var pcModelArray: [PCModel]?
     var category: Category?
     
+    
+    @IBAction func handleMyPC(_ sender: Any) {
+    let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        if let selectedProductsViewController =  mainStoryboard.instantiateViewController(withIdentifier: "SelectedProductsViewController") as? SelectedProductsViewController {
+        present(selectedProductsViewController, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPCParts()
@@ -41,7 +49,7 @@ class PCTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pcPartsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pcPartsCell", for: indexPath) 
         cell.textLabel?.font = UIFont(name: "Futura", size: 18)
         cell.textLabel?.textColor = .black
         // Configure the cell...
@@ -51,7 +59,7 @@ class PCTableViewController: UITableViewController {
         //let colorView = UIView(frame: cell.frame)
         cell.backgroundColor = UIColor(red: 200/255, green: 120/255, blue: 120/255, alpha: 0.3)
         //cell.selectedBackgroundView = colorView
-
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -88,9 +96,39 @@ extension PCTableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("calling segue")
-        let destinationController = segue.destination as! ProductTableViewController
-        destinationController.category = category
         
+        if let destinationController = segue.destination as? ProductTableViewController {
+        destinationController.delegate = self
+        destinationController.category = category
+        }
     }
 }
+extension PCTableViewController: ProductTableViewControllerDelgate {
+    func select(productName: String, selected: Bool) {
+        print("product name = \(productName)")
+        guard let pcModelArray = pcModelArray else {
+            return
+        }
+        for pcModel in pcModelArray {
+            let categories = pcModel.categories
+            for category in categories {
+                var productDetails = category.detail
+                 let index = productDetails.firstIndex { (productDetail) -> Bool in
+                    return productDetail.title == productName
+                }
+                if let index = index {
+                    productDetails[index].selected = selected
+                }
+            }
+            
+        }
+        print(pcModelArray)
+    }
+    
+    
+}
+
+    
+    
+
 
