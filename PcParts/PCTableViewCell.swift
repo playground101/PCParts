@@ -18,6 +18,8 @@ class PCTableViewCell: UITableViewCell {
     @IBOutlet weak var productPrice: UILabel!
     @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var productLink: UITextView!
+    @IBOutlet weak var productSelected: UISwitch!
+    
     weak var delegate: PCTableViewCellDelegate?
     
     @IBAction func handleSelectedSwitch(_ sender: UISwitch) {

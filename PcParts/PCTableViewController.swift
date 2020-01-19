@@ -14,9 +14,35 @@ class PCTableViewController: UITableViewController {
     
     
     @IBAction func handleMyPC(_ sender: Any) {
-    let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
         if let selectedProductsViewController =  mainStoryboard.instantiateViewController(withIdentifier: "SelectedProductsViewController") as? SelectedProductsViewController {
-        present(selectedProductsViewController, animated: true, completion: nil)
+            guard var pcModels = pcModelArray else {
+                return
+            }
+            var pcModelIndex = 0
+            var categoryIndex = 0
+            var productIndex = 0
+            var selectedProductDetails:[ProductDetail?] = []
+            for pcModel in pcModels {
+                //pcModelIndex = 0
+                let categories = pcModel.categories
+                categoryIndex = 0
+                for category in categories {
+                    let productDetails = category.detail
+                    productIndex = 0
+                    for productDetail in productDetails {
+                        if productDetail.selected == true {
+                            let selectedProductDetail = pcModelArray?[pcModelIndex].categories[categoryIndex].detail[productIndex]
+                            selectedProductDetails.append(selectedProductDetail)
+                        }
+                        productIndex += 1
+                    }
+                    categoryIndex += 1
+                }
+                pcModelIndex += 1
+            }
+            selectedProductsViewController.selectedProductDetails = selectedProductDetails
+            present(selectedProductsViewController, animated: true, completion: nil)
         }
     }
     
@@ -26,27 +52,27 @@ class PCTableViewController: UITableViewController {
         let color = UIColor(red: 120/255, green: 50/255, blue: 60/255, alpha: 1)
         tableView.backgroundView?.backgroundColor = color
         tableView.backgroundColor = color
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         
         return pcModelArray?.count ?? 0
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return pcModelArray?[section].categories.count ?? 0
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pcPartsCell", for: indexPath) 
@@ -54,7 +80,7 @@ class PCTableViewController: UITableViewController {
         cell.textLabel?.textColor = .black
         // Configure the cell...
         cell.textLabel?.text = pcModelArray?[indexPath.section].categories[indexPath.row].name
-       
+        
         cell.textLabel?.numberOfLines = 0
         //let colorView = UIView(frame: cell.frame)
         cell.backgroundColor = UIColor(red: 200/255, green: 120/255, blue: 120/255, alpha: 0.3)
@@ -98,37 +124,46 @@ extension PCTableViewController {
         print("calling segue")
         
         if let destinationController = segue.destination as? ProductTableViewController {
-        destinationController.delegate = self
-        destinationController.category = category
+            destinationController.delegate = self
+            destinationController.category = category
         }
     }
 }
 extension PCTableViewController: ProductTableViewControllerDelgate {
     func select(productName: String, selected: Bool) {
         print("product name = \(productName)")
-        guard let pcModelArray = pcModelArray else {
+        guard var pcModels = pcModelArray else {
             return
         }
-        for pcModel in pcModelArray {
+        var pcModelIndex = 0
+        var categoryIndex = 0
+        var productIndex = 0
+        for pcModel in pcModels {
+            //pcModelIndex = 0
             let categories = pcModel.categories
+            categoryIndex = 0
             for category in categories {
                 var productDetails = category.detail
-                 let index = productDetails.firstIndex { (productDetail) -> Bool in
-                    return productDetail.title == productName
+                productIndex = 0
+                for productDetail in productDetails {
+                    if productDetail.title == productName {
+                        pcModelArray?[pcModelIndex].categories[categoryIndex].detail[productIndex].selected = selected
+                    }
+                    productIndex += 1
                 }
-                if let index = index {
-                    productDetails[index].selected = selected
-                }
+                categoryIndex += 1
             }
-            
+            pcModelIndex += 1
         }
-        print(pcModelArray)
+        
+        print(pcModels.first)
+        
     }
     
     
 }
 
-    
-    
+
+
 
 

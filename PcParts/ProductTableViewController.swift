@@ -45,6 +45,7 @@ class ProductTableViewController: UITableViewController {
         cell.productImage.image = UIImage(named: category?.detail[indexPath.row].image ?? "case")
         cell.productLink.text = category?.detail[indexPath.row].link
         cell.productPrice.text = category?.detail[indexPath.row].price
+        cell.productSelected.isOn = category?.detail[indexPath.row].selected ?? false
         cell.delegate = self
         
         return cell

@@ -140,6 +140,7 @@
                                     <outlet property="productLink" destination="zD9-2M-pQN" id="D4r-cU-eEE"/>
                                     <outlet property="productName" destination="Hpy-Xi-Yvu" id="sFN-ll-vba"/>
                                     <outlet property="productPrice" destination="quD-FY-my7" id="rVe-Xu-5xo"/>
+                                    <outlet property="productSelected" destination="zYJ-dG-5Lv" id="koq-cZ-d1K"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
