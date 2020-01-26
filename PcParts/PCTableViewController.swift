@@ -49,10 +49,9 @@ class PCTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPCParts()
-        let color = UIColor(red: 120/255, green: 50/255, blue: 60/255, alpha: 1)
-        tableView.backgroundView?.backgroundColor = color
-        tableView.backgroundColor = color
-        
+    tableView.backgroundView?.backgroundColor = UIColor.black
+      //  tableView.backgroundView?.tintColor = UIColor.black
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -83,7 +82,7 @@ class PCTableViewController: UITableViewController {
         
         cell.textLabel?.numberOfLines = 0
         //let colorView = UIView(frame: cell.frame)
-        cell.backgroundColor = UIColor(red: 200/255, green: 120/255, blue: 120/255, alpha: 0.3)
+        cell.backgroundColor = UIColor(red: 17/255, green: 138/255, blue: 178/255, alpha: 0.5)
         //cell.selectedBackgroundView = colorView
         
         return cell
@@ -92,7 +91,7 @@ class PCTableViewController: UITableViewController {
         return pcModelArray?[section].section
     }
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
-        view.tintColor = UIColor(red: 65/255, green: 50/255, blue: 60/255, alpha: 1)
+        view.tintColor = UIColor(red: 39/255, green: 71/255, blue: 110/255, alpha: 1)
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.textColor = UIColor.white
         header.textLabel?.font = UIFont(name: "Futura-Bold", size: 20)
